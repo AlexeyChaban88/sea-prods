@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                {% for image_item in product.productimage_set.all %}
+                    <div class="product-image-item">
+                        <img src="{{ image_item.image.url }}" class="image-responsive">
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-lg-6">
+                <h1 class="text-center">
+                    {{ product.name }}
+                </h1>
+                <div class="">
+                    <p>
+                        Цена: {{ product.price }}
+                    </p>
+                </div>
+                <div>
+                    <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#description" aria-controls="home" role="tab" data-toggle="tab">
+                                Описание
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#delivery" aria-controls="profile" role="tab" data-toggle="tab">
+                                Доставка
+                            </a>
+                        </li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Как заказать</a></li>
+
+                      </ul>
+
+                      <!-- Tab panes -->
+                      <div class="tab-content product-description-tabs">
+                        <div role="tabpanel" class="tab-pane active" id="description">
+                            {{ product.description }}
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="delivery">
+                            <p>Если вы хотите, чтобы вам доставили заказ, просто скажите об этом менеджеру. Если вы предпочтете сами забрать - то наш склад находится в с. Белоглинка ул. Сумсчкая 34.</p>
+                            <p> Доставка по Симферополю - 300руб, за город - 500руб, по Крыму (50+ км) - 1500руб</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages">
+                            <p>Цена указывается за килограмм продукции. Для заказа необходимо выбрать количество на странице товара, а потом</p>
+                            <p>перейти в корзину, указать в форме имя и номер телефона и нажать на кнопку "Заказать". После оформления заказа с вами свяжется менеджер для уточнения деталей.</p>
+                        </div>
+
+                      </div>
+                </div>
+                <div>
+                    <form id="form_buying_product" class="form-inline" action="{% url 'basket_adding' %}"> {% csrf_token %}
+                        <div class="form-group">
+                            <input type="number" class="form-control" id="number">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="submit_btn" class="btn btn-success btn-buy"
+                                data-product_id = "{{ product.id }}"
+                                data-name = "{{ product.name }}"
+                                data-price = "{{ product.price }}"
+                            >
+                                Купить
+                            </button>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
