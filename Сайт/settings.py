@@ -25,7 +25,7 @@ SECRET_KEY = 'q%9o2os%u1g=8u0w_n2a*15+uh76z5arkyytbwg8w)6_=$0kq9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['seaprods.pythonanywhere.com']
+ALLOWED_HOSTS = ['seaprods.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
