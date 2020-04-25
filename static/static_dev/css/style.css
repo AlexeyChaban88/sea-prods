@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 html, body{
 
     height: 100%;
@@ -87,21 +89,30 @@ html, body{
 
 
 .product-item{
-
-    height: 360px;
-
+    height: 400px;
+    width: 360px;
     background-color: white;
-
     border: 1px solid lightgrey;
-
     position: relative;
-
-    padding: 10px 0 10px 0;
-
+    padding: 25px 15px 25px 15px;
     text-align: center;
-
     margin-bottom: 10px;
+}
 
+.product-item img {
+    margin-left: 66px;
+}
+
+.product-image-item {
+    padding: 5px;
+    margin: 45px 0px 80px -90px;
+}
+
+.label  {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    color: black;
 }
 
 
@@ -121,43 +132,26 @@ html, body{
 
 
 .discount-container{
-
     position: absolute;
-
     top: 30%;
-
     background: #55e073;
-
     width: 30%;
-
     color: white;
-
     font-weight: 700;
-
     padding: 3px;
-
 }
 
 
 
 .section-delivery{
-
     height: 300px;
-
-    background-color: darkseagreen;
-
+    background-image: url("../img/1.jpg");
     text-align: center;
-
     color: white;
-
 }
 
-
-
 .product-image-item{
-
     padding: 5px;
-
     margin-bottom: 5px;
 
 }
@@ -165,65 +159,80 @@ html, body{
 
 
 .navbar-top{
-
     min-height: 10px;
-
     height: 20px;
-
     background-color: green;
-
     border: none;
-
     border-radius: 0;
-
 }
 
-
-
-.navbar-main{
-
-    background-color: #55e073;
-
-    border: none;
-
-    border-radius: 0;
-
+.navbar-main {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
 }
 
 
 
 .basket-container{
-
     position: relative;
-
     width: 400px;
-
     padding: 15px 10px;
-
 }
-
-
 
 .basket-items{
-
     position: absolute;
-
-    top: 50px;
-
+    top: 60px;
     width: 100%;
-
-    background-color: #55e093;
-
+    background-color: white;
     z-index: 10;
-
     padding: 10px;
-
+    border: 1px solid lightgray;
+    border-radius: 10px;
 }
 
-
-
 .form-error{
-
     color: red;
+}
 
+.info-content {
+    margin: 70px 0 120px 40px;
+}
+
+.info-content h1 {
+    font-size: 30px;
+    margin-bottom: 44px;
+}
+
+.info-content p {
+    margin: 0 0 60px;
+}
+
+.footer {
+    position: relative;
+    margin-top: -130px;
+    height: 270px;
+    clear: both;
+    background-color: white;
+    padding-top: 20px;
+    border-top: 1px solid lightgray;
+}
+
+.footer-content {
+    margin: 0px 20px 0px 20px;
+}
+
+.footer h1 {
+    font-size: 25px;
+}
+
+.footer p {
+    margin: 0 0 0;
+}
+
+.brand {
+    font-family: 'Quicksand', sans-serif;
+	color: lightgray;
+	padding-top: 30px;
+	font-size: 20px;
+	font-weight: 50px;
 }
